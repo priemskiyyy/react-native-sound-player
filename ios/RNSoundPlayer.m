@@ -81,7 +81,7 @@ RCT_EXPORT_METHOD(seek:(float)seconds) {
 RCT_EXPORT_METHOD(setSpeaker:(BOOL) on) {
     AVAudioSession *session = [AVAudioSession sharedInstance];
     if (on) {
-        [session setCategory: AVAudioSessionCategoryPlayAndRecord error: nil];
+        [session setCategory: AVAudioSessionCategoryPlayback error: nil];
         [session overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:nil];
     } else {
         [session setCategory: AVAudioSessionCategoryPlayback error: nil];
